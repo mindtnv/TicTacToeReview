@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Domain", "src\TicTacToe.Domain\TicTacToe.Domain.csproj", "{402D94B4-CB4D-4C3F-9BF0-7DDDE4E956C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Application", "src\TicTacToe.Application\TicTacToe.Application.csproj", "{1BC983EB-603C-49A6-88E1-B57D3787C8EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Infrastructure", "src\TicTacToe.Infrastructure\TicTacToe.Infrastructure.csproj", "{01F6FD12-EA66-4E6D-9FAE-AE73C5792466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.UnitTests", "src\TicTacToe.UnitTests\TicTacToe.UnitTests.csproj", "{775B93CB-D3F0-4F76-B12A-4E6E2E9372A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{402D94B4-CB4D-4C3F-9BF0-7DDDE4E956C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402D94B4-CB4D-4C3F-9BF0-7DDDE4E956C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402D94B4-CB4D-4C3F-9BF0-7DDDE4E956C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402D94B4-CB4D-4C3F-9BF0-7DDDE4E956C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC983EB-603C-49A6-88E1-B57D3787C8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC983EB-603C-49A6-88E1-B57D3787C8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC983EB-603C-49A6-88E1-B57D3787C8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC983EB-603C-49A6-88E1-B57D3787C8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F6FD12-EA66-4E6D-9FAE-AE73C5792466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F6FD12-EA66-4E6D-9FAE-AE73C5792466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F6FD12-EA66-4E6D-9FAE-AE73C5792466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F6FD12-EA66-4E6D-9FAE-AE73C5792466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775B93CB-D3F0-4F76-B12A-4E6E2E9372A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775B93CB-D3F0-4F76-B12A-4E6E2E9372A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775B93CB-D3F0-4F76-B12A-4E6E2E9372A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775B93CB-D3F0-4F76-B12A-4E6E2E9372A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
