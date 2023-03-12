@@ -1,6 +1,6 @@
 # Тестовое задание на должность Стажер backend C# SENSE CAPITAL
 
-Автор: Антонов Михаил [Резюме] (https://spb.hh.ru/resume/904ea23cff09dfa64c0039ed1f454548316d4c)
+Автор: Антонов Михаил [https://spb.hh.ru/resume/904ea23cff09dfa64c0039ed1f454548316d4c](Резюме)
 
 ## Описание
 

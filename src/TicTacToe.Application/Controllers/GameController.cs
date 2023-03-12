@@ -28,7 +28,7 @@ public class GameController : ControllerBase
         if (game == null)
             return NotFound();
 
-        return game;
+        return Ok(game);
     }
 
     [HttpPost]
