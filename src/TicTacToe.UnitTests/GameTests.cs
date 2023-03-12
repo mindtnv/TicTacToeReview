@@ -4,6 +4,7 @@ using TicTacToe.Domain;
 namespace TicTacToe.UnitTests;
 
 [TestFixture]
+[Category("Unit")]
 public class GameTests
 {
     [SetUp]

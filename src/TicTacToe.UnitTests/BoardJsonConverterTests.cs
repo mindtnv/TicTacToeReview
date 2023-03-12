@@ -6,6 +6,7 @@ using TicTacToe.Infrastructure;
 namespace TicTacToe.UnitTests;
 
 [TestFixture]
+[Category("Unit")]
 public class BoardJsonConverterTests
 {
     [Test]

@@ -5,6 +5,8 @@ using TicTacToe.Infrastructure;
 
 namespace TicTacToe.FunctionalTests;
 
+[TestFixture]
+[Category("Functional")]
 public class RedisGameRepositoryTests
 {
     protected RedisGameRepository GameRepository = null!;
