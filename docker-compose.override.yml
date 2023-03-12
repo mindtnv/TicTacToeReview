@@ -1,4 +1,13 @@
 services:
+  tictactoe:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - RABBITMQ__HOST=host.docker.internal
+      - RedisGameRepositorySettings__ConnectionString=host.docker.internal
+    ports:
+      - "5001:80"
+      
   redis:
     ports:
       - "6379:6379"

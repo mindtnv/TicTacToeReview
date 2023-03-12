@@ -1,3 +1,10 @@
 services:
+  tictactoe:
+    build:
+      context: .
+      dockerfile: src/TicTacToe.Application/Dockerfile
+    depends_on:
+      - redis
+  
   redis:
     image: redis:7.0.9-alpine
