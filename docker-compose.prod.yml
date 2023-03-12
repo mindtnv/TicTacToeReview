@@ -1,0 +1,30 @@
+﻿version: "3.7"
+
+networks:
+  traefik-public:
+    external: true
+
+services:
+  tictactoe:
+    image: registry.dev.gbms.site/tictactoe-tictactoe:latest
+    networks:
+      - traefik-public
+
+    deploy:
+      restart_policy:
+        condition: on-failure
+      mode: replicated
+      replicas: 1
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik-public
+        - traefik.http.routers.tictactoe.rule=Host(`tictactoe.gbms.site`)
+        - traefik.http.routers.tictactoe-http.entrypoints=http
+        - traefik.http.routers.tictactoe-http.service=tictactoe
+        - traefik.http.routers.tictactoe-http.rule=Host(`tictactoe.gbms.site`)
+        - traefik.http.routers.tictactoe-http.middlewares=https-redirect
+        - traefik.http.routers.tictactoe.entrypoints=https
+        - traefik.http.routers.tictactoe.tls=true
+        - traefik.http.routers.tictactoe.tls.certresolver=le
+        - traefik.http.services.tictactoe.loadbalancer.server.port=80
+        - traefik.http.routers.tictactoe.service=tictactoe
