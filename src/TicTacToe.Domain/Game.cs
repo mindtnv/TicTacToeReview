@@ -44,7 +44,6 @@ public class Game
         if (CurrentBoard.IsSymbolWon(CurrentPlayer.Symbol))
             Winner = CurrentPlayer;
 
-        if (!IsOver)
-            CurrentPlayer = CurrentPlayer.Id == PlayerOne.Id ? PlayerTwo : PlayerOne;
+        CurrentPlayer = CurrentPlayer.Id == PlayerOne.Id ? PlayerTwo : PlayerOne;
     }
 }
