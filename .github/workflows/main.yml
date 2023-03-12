@@ -43,6 +43,7 @@ jobs:
         with:
           push: true
           tags: registry.dev.gbms.site/tictactoe-tictactoe:latest
+          file: src/TicTacToe.Application/Dockerfile
 
   build-notify:
     runs-on: ubuntu-latest

@@ -3,6 +3,7 @@
 networks:
   traefik-public:
     external: true
+    
 
 services:
   tictactoe:
@@ -28,3 +29,6 @@ services:
         - traefik.http.routers.tictactoe.tls.certresolver=le
         - traefik.http.services.tictactoe.loadbalancer.server.port=80
         - traefik.http.routers.tictactoe.service=tictactoe
+    
+    redis:
+      
