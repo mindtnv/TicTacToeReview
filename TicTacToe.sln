@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Infrastructure", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.UnitTests", "src\TicTacToe.UnitTests\TicTacToe.UnitTests.csproj", "{775B93CB-D3F0-4F76-B12A-4E6E2E9372A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.FunctionalTests", "src\TicTacToe.FunctionalTests\TicTacToe.FunctionalTests.csproj", "{DDDF64BC-2119-4422-8182-779157E419C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{775B93CB-D3F0-4F76-B12A-4E6E2E9372A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{775B93CB-D3F0-4F76-B12A-4E6E2E9372A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{775B93CB-D3F0-4F76-B12A-4E6E2E9372A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDDF64BC-2119-4422-8182-779157E419C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDDF64BC-2119-4422-8182-779157E419C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDDF64BC-2119-4422-8182-779157E419C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDDF64BC-2119-4422-8182-779157E419C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

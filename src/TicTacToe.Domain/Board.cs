@@ -15,6 +15,7 @@ public class Board
         _board = board;
     }
 
+    public char GetCell(int row, int col) => _board[row, col];
     public bool IsEmptyCell(int row, int col) => _board[row, col] == default(char);
 
     public void PlaceSymbol(int row, int column, char symbol)
@@ -80,5 +81,19 @@ public class Board
                 return false;
 
         return true;
+    }
+
+    public static Board CreateFrom(IEnumerable<IEnumerable<char>> board)
+    {
+        var rows = board.ToArray();
+        var result = new char[rows.Length, rows.Length];
+        for (var i = 0; i < rows.Length; i++)
+        {
+            var row = rows[i].ToArray();
+            for (var j = 0; j < rows.Length; j++)
+                result[i, j] = row[j];
+        }
+
+        return new Board(rows.Length, result);
     }
 }

@@ -12,6 +12,10 @@ public class Game
     public bool IsOver => CurrentBoard.IsFull() || Winner != null;
     public bool IsDraw => CurrentBoard.IsFull() && Winner == null;
 
+    public Game()
+    {
+    }
+
     public Game(Player playerOne, Player playerTwo, int boardSize)
     {
         PlayerOne = playerOne;
