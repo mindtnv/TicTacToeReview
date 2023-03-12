@@ -1,6 +1,6 @@
 ﻿namespace TicTacToe.Domain;
 
-public class Board
+public class Board : IEquatable<Board>
 {
     private readonly char[,] _board;
     public readonly int Size;
@@ -13,6 +13,24 @@ public class Board
     {
         Size = size;
         _board = board;
+    }
+
+    public bool Equals(Board? other)
+    {
+        if (ReferenceEquals(null, other))
+            return false;
+        if (ReferenceEquals(this, other))
+            return true;
+
+        if (other.Size != Size)
+            return false;
+
+        for (var i = 0; i < Size; i++)
+            for (var j = 0; j < Size; j++)
+                if (other.GetCell(i, j) != _board[i, j])
+                    return false;
+
+        return true;
     }
 
     public char GetCell(int row, int col) => _board[row, col];
@@ -96,4 +114,17 @@ public class Board
 
         return new Board(rows.Length, result);
     }
+
+    public override bool Equals(object? obj)
+    {
+        if (ReferenceEquals(null, obj))
+            return false;
+        if (ReferenceEquals(this, obj))
+            return true;
+        if (obj.GetType() != GetType())
+            return false;
+        return Equals((Board) obj);
+    }
+
+    public override int GetHashCode() => HashCode.Combine(_board, Size);
 }

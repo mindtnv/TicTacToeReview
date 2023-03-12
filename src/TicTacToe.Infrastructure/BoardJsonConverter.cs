@@ -6,6 +6,8 @@ namespace TicTacToe.Infrastructure;
 
 public class BoardJsonConverter : JsonConverter<Board>
 {
+    public static readonly BoardJsonConverter Shared = new();
+
     public override Board? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
         var result = new List<List<char>>();
