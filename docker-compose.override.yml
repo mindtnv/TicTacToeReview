@@ -1,41 +1,13 @@
-version: "3.7"
-
-networks:
-  traefik-public:
-    external: true
-  tictactoe:
-    driver: overlay
-
 services:
+  tictactoe:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - RABBITMQ__HOST=host.docker.internal
+      - RedisGameRepositorySettings__ConnectionString=host.docker.internal
+    ports:
+      - "5001:80"
+  
   redis:
-    image: redis:7.0.9-alpine
-    networks:
-      - tictactoe
     ports:
       - "6379:6379"
-
-  tictactoe:
-    image: registry.dev.gbms.site/tictactoe-tictactoe
-    networks:
-      - traefik-public
-      - tictactoe
-    environment:
-      - RedisGameRepositorySettings__ConnectionString=redis
-    deploy:
-      restart_policy:
-        condition: on-failure
-      mode: replicated
-      replicas: 1
-      labels:
-        - traefik.enable=true
-        - traefik.docker.network=traefik-public
-        - traefik.http.routers.tictactoe.rule=Host(`tictactoe.dev.gbms.site`)
-        - traefik.http.routers.tictactoe-http.entrypoints=http
-        - traefik.http.routers.tictactoe-http.service=tictactoe
-        - traefik.http.routers.tictactoe-http.rule=Host(`tictactoe.dev.gbms.site`)
-        - traefik.http.routers.tictactoe-http.middlewares=https-redirect
-        - traefik.http.routers.tictactoe.entrypoints=https
-        - traefik.http.routers.tictactoe.tls=true
-        - traefik.http.routers.tictactoe.tls.certresolver=le
-        - traefik.http.services.tictactoe.loadbalancer.server.port=80
-        - traefik.http.routers.tictactoe.service=tictactoe
